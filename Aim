@@ -1,0 +1,77 @@
+
+public class Assist {
+
+boolean Assist = true;
+
+    public static class AssistSetting {
+
+        int Tracking = 70;
+        int Sensibilidad = 15000;
+        
+    }
+
+// Automatizacion mamahuevo manco xd //
+public class  settings  {
+
+Configuration ajuste = new Configuration();
+
+         public void verificarassitencia(Activity activity) {
+        
+         ajuste.calcularCentro(activity);
+
+              if (Assist) {
+            int x = ajuste.posicionX;
+            int y = ajuste.posicionY;
+  
+
+// aqui van las funciones de las variables//
+        Aplicar = Motionevent.Sensibilidad;
+       Aplicar = Motionevent.Tracking;
+
+            Toast("Sistema aplicados");
+        }else {
+            //Aca la desactivacion de la configur...
+             }
+        }
+    }
+
+    public class Configuration {
+
+        int AnchoX = 720;
+        int AnchoY = 1600;
+
+        int DisplayX;
+        int DisplayY;
+
+        int posicionX;
+        int posicionY;
+
+        public void calcularCentro( ) {
+
+            DisplayMetrics Metrics = new   DisplayMetrics();
+
+            getWindowManager()
+                .getDefaultDisplay()
+                .getMetrics(Metrics);
+
+            DisplayX = Metrics.widthPixels;
+            DisplayY = Metrics.heightPixels;
+
+            if (AnchoX != 720 || AnchoY != 1600) {
+
+                posicionX = AnchoX / 2;
+                posicionY = AnchoY / 2;
+
+                posicionX = DisplayX;
+                posicionY = DisplayY;
+
+            } else {
+
+                // Resolución original
+                posicionX = 360;
+                posicionY = 800;
+
+            }
+        }
+    }
+}
